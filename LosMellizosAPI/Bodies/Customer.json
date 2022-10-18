@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "firstName": "John",
+  "lastName": "Doe",
+  "userName": "JDoe",
+  "email": "JDoe@mail.com",
+  "password": "123456",
+  "address": "5° Avenue",
+  "city": "New York City",
+  "state": "New York",
+  "phone": "5552156874",
+  "class": 1
+}
+

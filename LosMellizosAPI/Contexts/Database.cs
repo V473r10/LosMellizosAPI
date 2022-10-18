@@ -59,6 +59,7 @@ namespace LosMellizosAPI.Contexts
                 customer.Property(c => c.State).IsRequired();
                 customer.Property(c => c.Phone).IsRequired();
                 customer.Property(c => c.Class).IsRequired();
+                customer.HasOne(c => c.CustomerClass).WithMany(c => c.Customers).HasForeignKey(c => c.Class);
             });
 
             modelBuilder.Entity<CustomerClass>(customerClass =>

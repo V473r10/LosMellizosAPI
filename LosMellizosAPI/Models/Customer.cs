@@ -14,8 +14,9 @@ namespace LosMellizosAPI.Models
         public string? City { get; set; }
         public string? State { get; set; }
         public string? Phone { get; set; }
-        public Class Class { get; set; }
+        public int Class { get; set; }
         
+        [JsonIgnore]
         public virtual CustomerClass? CustomerClass { get; set; }
 
         [JsonIgnore]

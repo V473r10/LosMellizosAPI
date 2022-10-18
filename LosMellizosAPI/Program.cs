@@ -1,4 +1,5 @@
 using LosMellizosAPI.Contexts;
+using LosMellizosAPI.Services;
 
 var corsPolitics = "_corsPolitics";
 
@@ -24,6 +25,14 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSqlServer<Database>(
     "DATA SOURCE = MSI; INITIAL CATALOG = LosMellizos; USER ID = sa; PASSWORD = v473r10;");
+
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<ICustomerClassService, CustomerClassService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+
 
 var app = builder.Build();
 
